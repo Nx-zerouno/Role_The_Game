@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/home">home<ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Incantesimi</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar animated (ionChange)="cercaIncantesimo($event)"></ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/incantesimo-aggiungi">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button routerLink="/incantesimo-preferiti">
+      <ion-icon name="star"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let incantesimo of incantesimi">
+
+      <ion-item class="no padding" >
+
+        <ion-label [routerLink]="['/incantesimo-consulta/', incantesimo.id]" text-wrap>
+          <h2>{{incantesimo.nome}}</h2>
+          <p>{{incantesimo.livello}}°</p>
+          <p>{{incantesimo.scuola}}</p>                   
+        </ion-label>
+
+        <div>
+          <ion-button expand="round" size="default" color="{{incantesimo.preferito}}" expand="{{incantesimo.preferito}}" id="{{incantesimo.id}}" (click)="aggiungiRimuoviPreferiti(incantesimo.id, incantesimo)">
+            <ion-icon name="star" ></ion-icon>
+          </ion-button>
+        </div>
+        
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteIncantesimo(incantesimo.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

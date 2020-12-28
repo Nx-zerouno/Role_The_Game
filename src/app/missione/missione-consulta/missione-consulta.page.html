@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/missione-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+      <ion-button (click)="abilitaDisabilitaModifica()">modifica<ion-icon name="settings-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <div text-center>
+      <ion-title>Ispeziona</ion-title>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-sliding>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="titolo" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.titolo" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>titolo</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="tipo" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.tipo" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>tipo</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="20" id="descrizione" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.descrizione" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>descrizione</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-item-sliding>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-button id="modifica" disabled="true" expand="block" color="primary" (click)="editMissione(missione)">SALVA</ion-button>
+</ion-toolbar>

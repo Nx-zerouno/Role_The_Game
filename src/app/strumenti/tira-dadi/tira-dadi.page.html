@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/home">home<ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Tira Dadi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--STRUMENTO TIRA DADI-->
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><b>Roll:</b></ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+
+      <div class="contenitore">
+        <ion-input id="qtDadi" type="number" placeholder="1" class="input" min="1" max="15" [(ngModel)]="tiraDadi.qtDadi"></ion-input>
+      </div>
+
+      <div class="contenitore">
+        <ion-label class="spazio"> </ion-label>
+      </div>
+
+      <div class="contenitore">
+        <ion-select id="tpDadi" interface="popover"  placeholder="d20" class="dado" [(ngModel)]="tiraDadi.tpDadi">
+          <ion-select-option value="d4">d4</ion-select-option>          
+          <ion-select-option value="d6">d6</ion-select-option>
+          <ion-select-option value="d8">d8</ion-select-option>
+          <ion-select-option value="d12">d12</ion-select-option>
+          <ion-select-option value="d20">d20</ion-select-option>
+          <ion-select-option value="d100">d100</ion-select-option>
+        </ion-select>
+      </div>
+
+      <div class="contenitore">
+        <ion-label class="addizione">+</ion-label>
+      </div>
+
+      <div class="contenitore">
+        <ion-input id="modificatori" type="number" placeholder="0" class="input" min="-15" max="15" [(ngModel)]="tiraDadi.modificatore"></ion-input>
+      </div>
+
+      <br>
+      <ion-button size="large" color="success" (click)="roll(tiraDadi)">Roll</ion-button>
+
+      <ion-label id="display" size="large" class="risultato">{{tiraDadi.risultato}}</ion-label>
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+ 
+
+
+
+
+

@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/home">home<ion-icon name="home-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Personaggi</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/personaggio-aggiungi">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list lines="none">
+
+    <ion-item-sliding *ngFor="let personaggio of personaggi">
+
+      <ion-item class="no padding" >
+
+        <ion-thumbnail slot="start">
+          <img src="../../../assets/icon/body-outline.png">
+        </ion-thumbnail>
+
+
+        <ion-label [routerLink]="['/personaggio-consulta/', personaggio.id]" text-wrap>
+          <h2>{{personaggio.nome}}</h2>
+          <p>{{personaggio.razza}}</p>
+          <p>{{personaggio.classe}}</p>   
+          <p>{{personaggio.livello}}°</p>                
+        </ion-label>
+        
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deletePersonaggio(personaggio.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

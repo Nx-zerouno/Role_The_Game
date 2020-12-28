@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/incantesimo-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Preferiti</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let incantesimo of incantesimi">
+
+      <ion-item class="no padding" >
+
+        <ion-label [routerLink]="['/incantesimo-consulta/', incantesimo.id]">
+          <h2>Nome: {{incantesimo.nome}}</h2>
+          <p>Livello: {{incantesimo.livello}}</p>
+          <p>Scuola: {{incantesimo.scuola}}</p>                   
+        </ion-label>
+
+        <div>
+          <ion-button size="large" color="{{incantesimo.preferito}}" expand="{{incantesimo.preferito}}" id="{{incantesimo.id}}" (click)="aggiungiRimuoviPreferiti(incantesimo.id, incantesimo)">
+            <ion-icon name="star" ></ion-icon>
+          </ion-button>
+        </div>
+        
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option [routerLink]="['/incantesimo-modifica/', incantesimo.id]">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteIncantesimo(incantesimo.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

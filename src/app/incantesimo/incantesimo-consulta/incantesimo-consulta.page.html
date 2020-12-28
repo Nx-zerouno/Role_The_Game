@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/incantesimo-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+      <ion-button (click)="abilitaDisabilitaModifica()">modifica<ion-icon name="settings-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <div text-center>
+      <ion-title>Ispeziona</ion-title>
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-sliding>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-input id="livello" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.livello" readonly>livello:  </ion-input>
+        </ion-card-subtitle>
+        <ion-card-title>
+          <ion-textarea rows="3" id="nome" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.nome" readonly></ion-textarea>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-textarea rows="10" id="descrizione" style="color:gray" type="text" class="tab" [(ngModel)]="incantesimo.descrizione" readonly></ion-textarea>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="scuola" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="incantesimo.scuola" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>scuola</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="raggio" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.raggio" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>raggio</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="area" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.area" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>area</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="durata" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.durata" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>durata</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="danno" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.danno" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>danno</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="dadiVita" style="color:white" type="text" class="tab" [(ngModel)]="incantesimo.dadiVita" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>dadi vita</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-item-sliding>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-button id="modifica" disabled="true" expand="block" color="primary" (click)="editIncantesimo(incantesimo)">SALVA</ion-button>
+</ion-toolbar>
+
+
+
+
+

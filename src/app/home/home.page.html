@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <ion-grid >
+    <br>
+    <br>
+    <ion-row class="center">
+
+      <!--riga 1 colonna di SX-->
+      <ion-item class="center">
+        <ion-col >
+            <ion-button size="default"  color="primary"  routerLink="/incantesimo-lista" >
+              <ion-img src="../../../assets/icon/icon_book.png"></ion-img>
+            </ion-button>
+            <ion-label>INCANTESIMI</ion-label>
+          </ion-col>
+      </ion-item>
+
+      <!--riga 1 colonna di DX-->
+      <ion-item class="center">
+        <ion-col>
+          <ion-button size="default"  color="primary"  routerLink="/personaggio-lista">
+            <ion-img src="../../../assets/icon/icon_id-card.png"></ion-img>
+          </ion-button>
+          <ion-label>PERSONAGGI</ion-label>
+        </ion-col>
+      </ion-item>
+
+    </ion-row>
+    <br>
+    <br>
+    <ion-row class="center">
+      
+      <!--riga 2 colonna di SX-->
+      <ion-item class="center">
+        <ion-col >
+          <ion-button size="default"  color="primary"  routerLink="/missione-lista">
+            <ion-img src="../../../assets/icon/icon_list.png"></ion-img>
+          </ion-button>
+          <ion-label text-align="center">MISSIONI</ion-label>
+        </ion-col>
+      </ion-item>
+
+      <!--riga 2 colonna di DX-->
+      <ion-item class="center">
+        <ion-col >
+          <ion-button size="default"  color="primary"  routerLink="/tira-dadi" class="center">
+            <ion-img src="../../../assets/icon/icon_flickr.png"></ion-img>
+          </ion-button>
+          <ion-label >TIRA DADI</ion-label>
+        </ion-col>
+      </ion-item>
+
+    </ion-row>
+    <br>
+    <br>
+    <ion-row class="center">
+
+      <!--riga 3 colonna di SX-->
+      <ion-item class="center">
+        <ion-col >
+          <ion-button size="default"  color="light"  routerLink="/accedi" >
+            <ion-img src="../../../assets/icon/icon_person.png"></ion-img>
+          </ion-button>
+            <ion-label>LOGOUT</ion-label>
+        </ion-col>
+      </ion-item>
+
+    </ion-row>
+    <br>
+  </ion-grid>
+
+</ion-content>

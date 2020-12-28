@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/personaggio-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Crea Personaggio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-sliding>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="nome" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.nome" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>nome</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="razza" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.razza" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>razza</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="classe" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.classe" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>classe</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="livello" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.livello" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>livello</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="sesso" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.sesso" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>sesso</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="eta" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.eta" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>eta</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="altezza" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.altezza" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>altezza</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="peso" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.peso" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>peso</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="capelli" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.capelli" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>capelli</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea id="occhi" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.occhi" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>occhi</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="patria" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.patria" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>patria</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-item-sliding>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-button id="modifica" expand="block" color="primary" (click)="inserisciPersonaggio(personaggio)">AGGIUNGI</ion-button>
+</ion-toolbar>

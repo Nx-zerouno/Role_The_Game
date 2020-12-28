@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/missione-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-title>Crea Missione</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-sliding>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="titolo" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.titolo" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>titolo</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="tipo" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.tipo" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>tipo</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="20" id="descrizione" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="missione.descrizione" ></ion-textarea></ion-card-title>
+        <ion-card-subtitle>descrizione</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-item-sliding>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-button id="modifica" expand="block" color="primary" (click)="inserisciMissione(missione)">AGGIUNGI</ion-button>
+</ion-toolbar>

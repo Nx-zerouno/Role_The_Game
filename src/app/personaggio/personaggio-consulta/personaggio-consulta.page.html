@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start" >
+      <ion-button routerLink="/personaggio-lista">lista<ion-icon name="return-down-back-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+      <ion-button (click)="abilitaDisabilitaModifica()">modifica<ion-icon name="settings-outline"></ion-icon></ion-button>
+    </ion-buttons>
+
+    <div text-center>
+      <ion-title>Ispeziona</ion-title>
+    </div>
+
+  </ion-toolbar >
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-sliding>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="nome" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.nome" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>nome</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="razza" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.razza" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>razza</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="classe" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.classe" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>classe</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="livello" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.livello" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>livello</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="sesso" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.sesso" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>sesso</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="eta" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.eta" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>eta</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="altezza" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.altezza" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>altezza</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="peso" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.peso" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>peso</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="capelli" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.capelli" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>capelli</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="occhi" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.occhi" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>occhi</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><ion-textarea rows="2" id="patria" style="color:white; overflow: none" type="text" class="tab" [(ngModel)]="personaggio.patria" readonly></ion-textarea></ion-card-title>
+        <ion-card-subtitle>patria</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+  </ion-item-sliding>
+
+</ion-content>
+
+<ion-toolbar>
+  <ion-button id="modifica" disabled="true" expand="block" color="primary" (click)="editPersonaggio(personaggio)">SALVA</ion-button>
+</ion-toolbar>
